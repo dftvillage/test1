@@ -110,21 +110,21 @@ a{
         border-left: 1px #dee0e6 solid;
         width: 64px;
         text-align: center;
+        & > .fa-facebook-square{
+        color: #2b75b2;
+        }
+        & > .fa-twitter{
+            color: #1faae2;
+        }
+        & > .fa-instagram{
+            color: #26658e;
+        }
+        & > .fa-google-plus{
+            color: #dd4070;
+        }
     }
     & > a:last-child{
         border-right: 1px #dee0e6 solid;
-    }
-    & .fa-facebook-square{
-        color: #2b75b2;
-    }
-    & .fa-twitter{
-        color: #1faae2;
-    }
-    & .fa-instagram{
-        color: #26658e;
-    }
-    & .fa-google-plus{
-        color: #dd4070;
     }
 }
 
@@ -132,6 +132,65 @@ a{
 
 .header__body{
     height: 217px;
+    line-height: 217px;
     width: $allWidth;
     border-bottom: 1px solid $lightBlueBgColor;
+}
+.header__logo-block{
+    width: 50%;
+    & > a{
+        font-size: 40px;
+        & > h1{
+            display: inline;
+        }
+    }
+}
+.header__contact-icons{
+    width: 50%;
+    text-align: right;
+    font-size: 0;
+    & > a{
+        color: #6d6e71;
+        font-size: 28px;
+        margin-right: 27px;
+        line-height: 277px;
+        padding: 0 19px;
+        position: relative;
+        &:hover{
+            color: #1faae2;
+        }
+        &:hover::after{
+            content: attr(data);
+            text-align: center;
+            font-size: 16px;
+            color: $main-textColor;
+            line-height: 47px;
+            position: absolute;
+            top: -68px;
+            left: -80px;
+            width: 223px;
+            height: 47px;
+            border: 2px #d4d4d5 solid;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        &:hover::before{
+            content: '';
+            background: #fff;
+            position: absolute;
+            top: -33px;
+            left: 15px;
+            width: 30px;
+            height: 30px;
+            border-bottom: 2px #d4d4d5 solid;
+            border-right: 2px #d4d4d5 solid;
+            border-radius: 2px;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+    }
+    & > a:last-child{
+        margin-right: 0;
+        border-left: 1px solid $lightBlueBgColor;
+    }
 }

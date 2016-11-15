@@ -83,18 +83,70 @@ a:active {
     border-left: 1px #dee0e6 solid;
     width: 64px;
     text-align: center; }
+    .header__social-links > a > .fa-facebook-square {
+      color: #2b75b2; }
+    .header__social-links > a > .fa-twitter {
+      color: #1faae2; }
+    .header__social-links > a > .fa-instagram {
+      color: #26658e; }
+    .header__social-links > a > .fa-google-plus {
+      color: #dd4070; }
   .header__social-links > a:last-child {
     border-right: 1px #dee0e6 solid; }
-  .header__social-links .fa-facebook-square {
-    color: #2b75b2; }
-  .header__social-links .fa-twitter {
-    color: #1faae2; }
-  .header__social-links .fa-instagram {
-    color: #26658e; }
-  .header__social-links .fa-google-plus {
-    color: #dd4070; }
 
 .header__body {
   height: 217px;
+  line-height: 217px;
   width: 100%;
   border-bottom: 1px solid #eceef4; }
+
+.header__logo-block {
+  width: 50%; }
+  .header__logo-block > a {
+    font-size: 40px; }
+    .header__logo-block > a > h1 {
+      display: inline; }
+
+.header__contact-icons {
+  width: 50%;
+  text-align: right;
+  font-size: 0; }
+  .header__contact-icons > a {
+    color: #6d6e71;
+    font-size: 28px;
+    margin-right: 27px;
+    line-height: 277px;
+    padding: 0 19px;
+    position: relative; }
+    .header__contact-icons > a:hover {
+      color: #1faae2; }
+    .header__contact-icons > a:hover::after {
+      content: attr(data);
+      text-align: center;
+      font-size: 16px;
+      color: #6d6e71;
+      line-height: 47px;
+      position: absolute;
+      top: -68px;
+      left: -80px;
+      width: 223px;
+      height: 47px;
+      border: 2px #d4d4d5 solid;
+      border-radius: 5px;
+      z-index: 1; }
+    .header__contact-icons > a:hover::before {
+      content: '';
+      background: #fff;
+      position: absolute;
+      top: -33px;
+      left: 15px;
+      width: 30px;
+      height: 30px;
+      border-bottom: 2px #d4d4d5 solid;
+      border-right: 2px #d4d4d5 solid;
+      border-radius: 2px;
+      transform: rotate(45deg);
+      z-index: 2; }
+  .header__contact-icons > a:last-child {
+    margin-right: 0;
+    border-left: 1px solid #eceef4; }
