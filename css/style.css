@@ -1,3 +1,17 @@
+@media all and (max-width: 1170px) {
+  .header__content-wrap {
+    width: 100% !important; } }
+
+@media all and (max-width: 970px) {
+  .header__content-wrap {
+    flex-flow: column wrap !important; }
+  .header__social-links {
+    text-align: center !important; }
+  .header__social-links, .header__navigation-top {
+    width: 100% !important; }
+  .header__navigation-top {
+    text-align: center !important; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -16,10 +30,10 @@ a:link {
   color: #6d6e71;
   text-decoration: none; }
 
-a:hover {
-  color: #939497; }
-
 a:visited {
+  color: #6d6e71; }
+
+a:hover {
   color: #939497; }
 
 a:active {
@@ -31,7 +45,7 @@ a:active {
 
 .header__top-line {
   background: #eceef4;
-  height: 63px;
+  min-height: 63px;
   line-height: 63px; }
 
 .header__content-wrap {
@@ -42,31 +56,28 @@ a:active {
 
 .header__navigation-top {
   width: 50%;
-  margin-top: 3px; }
-  .header__navigation-top > ul {
-    display: block;
-    font-size: 0; }
-    .header__navigation-top > ul > li {
-      font-size: 12px;
-      font-weight: bold;
-      background: #fff;
-      display: inline-block;
-      height: 32px;
-      width: 98px;
-      border-radius: 5px;
-      text-align: center;
-      line-height: 32px;
-      margin-right: 3px; }
-      .header__navigation-top > ul > li > a {
-        display: block;
-        width: 100%;
-        height: 100%; }
+  margin: 3px auto 0;
+  text-align: left; }
+  .header__navigation-top a {
+    display: inline-block;
+    height: 32px;
+    width: 98px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 32px;
+    margin-right: 3px;
+    border-radius: 5px;
+    text-align: center; }
 
 .header__social-links {
   width: 50%;
   text-align: right;
-  font-size: 0; }
+  font-size: 0;
+  margin: 0 auto; }
   .header__social-links > a {
+    height: 100%;
+    line-height: 63px;
     font-size: 24px;
     display: inline-block;
     border-left: 1px #dee0e6 solid;
@@ -84,9 +95,6 @@ a:active {
     color: #dd4070; }
 
 .header__body {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row nowrap;
   height: 217px;
   width: 100%;
   border-bottom: 1px solid #eceef4; }
