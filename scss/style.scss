@@ -1,6 +1,6 @@
-$redColor: #d71920;
-$whiteColor: #fff;
-$blackColor: #000;
+$baseWidth: 1160px;
+$allWidth: 100%;
+$main-textColor: #6d6e71;
 
 *{
     margin: 0;
@@ -11,39 +11,89 @@ $blackColor: #000;
 html, body, .wrap{
     width: 100%;
     min-height: 100%;
-    font-family: Verdana, sans-serif;
-    color: #111;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: $main-textColor;
 }
-
-.wrap{
+ul{
+    list-style-type: none;
+}
+a{
+    &:link{
+        color: $main-textColor;
+        text-decoration: none;
+    }
+    &:hover{
+        color: lighten($main-textColor, 15%);
+    }
+    &:visited{
+        color: lighten($main-textColor, 15%);
+    }
+    &:active{
+        color: lighten($main-textColor, 25%);
+    }
+}
+.header, .header__top-line, .header__content-wrap{
+    width: $allWidth;
     margin: 0 auto;
 }
-
-.header-wrap{
-    margin: 0 auto;
-    width: 100%;
+.header__top-line{
+    background: #eceef4;
+    height: 63px;
+    line-height: 63px;
 }
-.header-wrap__header{
-    margin: 0 auto;
-    width: 1280px;
-    height: 150px;
-}
-.header-wrap__top-line{
+.header__content-wrap{
     display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
     justify-content: space-between;
-    height: 100px;
-    width: 100%;
-    background: darken($whiteColor, 2%);
+    flex-flow: row nowrap;
+    width: $baseWidth;
 }
-.header-wrap__logo{
-    width: 200px;
-    line-height: 100px;
+.header__navigation-top, .header__social-links{
+    width: 50%;
+    & > ul{
+        display: block;
+        font-size: 0;
+        & > li{
+            font-size: 12px;
+            font-weight: bold;
+            background: #fff;
+            display: inline-block;
+            height: 32px;
+            width: 98px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 32px;
+            margin-right: 3px;
+            & > a{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
-.header-wrap__search{
-    width: 100%;
-}
-.header-wrap__other{
-    width: 300px;
+.header__social-links{
+    text-align: right;
+    font-size: 0;
+    & > a{
+        font-size: 24px;
+        display: inline-block;
+        border-left: 1px #dee0e6 solid;
+        width: 64px;
+        text-align: center;
+    }
+    & > a:last-child{
+        border-right: 1px #dee0e6 solid;
+    }
+    & .fa-facebook-square{
+        color: #2b75b2;
+    }
+    & .fa-twitter{
+        color: #1faae2;
+    }
+    & .fa-instagram{
+        color: #26658e;
+    }
+    & .fa-google-plus{
+        color: #dd4070;
+    }
 }
